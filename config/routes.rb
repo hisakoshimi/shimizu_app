@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'users/show'
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => "registrations"
+  }
+  
   root  'static_pages#home'
   resources :users, only: [:show]
   
