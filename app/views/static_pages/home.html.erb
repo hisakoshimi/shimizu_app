@@ -1,38 +1,47 @@
-<div class="center jumbotron">
-  <h1>投稿を始めてみましょう！</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
-  <h2>
-    これは
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    のサンプルアプリケーションです
-  </h2>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="/header_2.jpg" alt="First slide">
+      <div class="carousel-caption">
+        <h1>投稿を始めてみましょう！</h1>
+        <p>Follow your interests.Hear what people are talking about.</p>
+      </div>
+    </div>
 
-  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
-  <!--清水さんの書いていたものです-->
-  <!--<%#= link_to "Sign up now!", 'new_user_registration_path', class: "btn btn-lg btn-primary" %>-->
-</div>
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+    <div class="item">
+      <img src="/header_3.jpg" alt="Second slide">
+      <div class="carousel-caption">
+        <h1>投稿を始めてみましょう！</h1>
+        <p>Follow your interests.Hear what people are talking about.</p>
+      </div>
+    </div>
 
-<div id="sampleCarousel" class="carousel slide" data-ride="carousel">
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<img src="/header_2.jpg" alt="First slide">
-		</div>
-		<div class="item">
-			<img src="/header_3.jpg" alt="Second slide">
-		</div>
-		<div class="item">
-			<img src="/header_4.jpg" alt="Third slide">
-		</div>
-	</div>
-</div>
+    <div class="item">
+      <img src="/header_4.jpg" alt="Third slide">
+      <div class="carousel-caption">
+        <h1>投稿を始めてみましょう！</h1>
+        <p>Follow your interests.Hear what people are talking about.</p>
+      </div>
+    </div>
+  </div>
+
+<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary btn-space" %>
 
   <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height:   500px;
-        width:   1150px;
+        height:   400px;
+        width:   1000px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
