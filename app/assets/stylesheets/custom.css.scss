@@ -198,22 +198,37 @@ input {
   }
 }
 
-// /* main shimizu 12may */
-// .carousel slide {/*親div*/
-//   position: relative;
-//   z-index: 1;
-// }
-
-// .btn btn-lg btn-primary p {
-//   position: absolute;/*絶対配置*/  
-//   color: black;
-//   z-index: 2;/*文字は白に*/
-//   top: 100;
-//   left: 100;
-//   font-size: 50px;
-//   }
+/* shimizu 12may */
   
 .btn-space {
   margin: 30px;
   margin-left: 410px;
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $gray-light;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
