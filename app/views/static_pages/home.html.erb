@@ -1,5 +1,21 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
+<% if signed_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   Indicators 
     <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -7,7 +23,7 @@
     <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+   Wrapper for slides 
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="/header_2.jpg" alt="First slide">
@@ -90,4 +106,8 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <div id="map"></div>
-    
+<% end %>
+
+ 
+
+ 
