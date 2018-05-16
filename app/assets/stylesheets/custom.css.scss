@@ -68,8 +68,18 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #999999;
   text-decoration: none;
+}
+
+.navbar-inverse {
+     background-color: #337ab7;
+     border-color: #2e6da4;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color:#fff;  
+    font-size: 17px;
 }
 
 /* footer */
@@ -91,6 +101,7 @@ footer a:hover {
 
 footer small {
   float: left;
+  font-size: 15px;
 }
 
 footer ul {
@@ -203,6 +214,16 @@ input {
 .btn-space {
   margin: 30px;
   margin-left: 410px;
+}
+
+.carousel-caption h1{
+  font-size: 52px;
+  color:#ECF0F1;
+}
+
+.carousel-caption p{
+  font-size: 20px;
+  color: #ECF0F1;
 }
 
 /* microposts */
