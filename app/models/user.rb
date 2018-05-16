@@ -15,7 +15,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   def feed
-    #Micropost.where("user_id = ?", id)
+    Micropost.where("user_id = ?", id)
+  end
+  
+  def feed
     Micropost.from_users_followed_by(self)
   end
   
