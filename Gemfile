@@ -64,5 +64,7 @@ gem 'will_paginate-bootstrap', '1.0.1'
 gem 'paperclip','~> 6.0'
 
 #DBは私の方でインストールします。
-# gem 'sqlite3', group: :test
-# gem 'pg', group: [:development, :production ]
+gem 'sqlite3', group: [:development,:test]
+gem 'pg', group: [:production]
+#herokuのlogを見るためのgem
+gem 'rails_12factor', group: :production
