@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   #デプロイ時にここにheroku のAPI　keyをセット
-config.secret_key = 'e5a6bc6d-299e-4f48-a817-8bd9fd3bf19e'
+  config.secret_key = 'e5a6bc6d-299e-4f48-a817-8bd9fd3bf19e'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
