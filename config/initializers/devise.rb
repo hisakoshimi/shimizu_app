@@ -8,7 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'b47e4d6d2583659353e349764b939749cf67d23d825a61602bc334fdfeaf2a645a1643d3107d08e934f91088cb1f9cd8d02ffa445f0f98be9076908359dabb9e'
+  #デプロイ時にここにheroku のAPI　keyをセット
+config.secret_key = 'e5a6bc6d-299e-4f48-a817-8bd9fd3bf19e'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
