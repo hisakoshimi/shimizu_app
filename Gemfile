@@ -68,3 +68,4 @@ gem 'sqlite3', group: [:development,:test]
 gem 'pg', group: [:production]
 #herokuのlogを見るためのgem
 gem 'rails_12factor', group: :production
+gem 'passenger'
