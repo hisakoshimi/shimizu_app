@@ -25,23 +25,30 @@
 #   database: db/production.sqlite3
 
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  database: shimizu_app
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
-  host:     <%= ENV['IP'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  database: shimizu_app_test
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  database: shimizu_app
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
   
 production:
   adapter: postgresql
@@ -49,6 +56,5 @@ production:
   username: postgres
   password: 123456
   database: shimizu_app_production
-  #database: shimizu_app
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
